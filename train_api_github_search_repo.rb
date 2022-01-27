@@ -1,12 +1,13 @@
 require 'net/http'
 require 'json'
 
-url = 'https://api.github.com/search/repositories?"q"="russian-like"'
+url = 'https://api.github.com/search/repositories?q=russian-like'
 
 
 uri = URI(url)
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true
+
 
 
 #пробовали имитировать запрос от Браузера. Но не работает
